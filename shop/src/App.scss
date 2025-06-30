@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+.App{
+    .popup{
+        width: 100%;
+        height: 50px;
+        background-color: #F296A0;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        .mySwiper{
+            text-align: center;
+            line-height: 50px;
+        }
+    }
+    header{
+        display: flex;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background-color: #fff;
+        justify-content: space-between;
+        padding: 0 30px;
+        align-items: center;
+        z-index: 10;
+        .headerLeft{
+            display: flex;
+            h1{
+                padding-top: 5px;
+                a{
+                    font-size: 20px;
+                    font-family: "Noto Sans", sans-serif;
+                    font-weight: 500;
+                    color: #5a514b;
+                    letter-spacing: 3px;
+                }
+            }
+            nav{
+                margin-left: 30px;
+                ul{
+                    display: flex;
+                    height: 70px;
+                    align-items: center;
+                    li{
+                        margin-right: 20px;
+                        a{
+                            position: relative;
+                            color: #877B83;
+                            span{
+                                position: absolute;
+                                font-size: 12px;
+                                top: -5px;
+                                color: #f66b67;
+                                font-weight: 500;
+                            }
+                            &.g{color: greenyellow;}
+                        }
+                    }
+                }
+            }
+        }
+        .headerRight{
+            .gnb{
+                ul{
+                    display: flex;
+                    li{
+                        margin-left: 20px;
+                        a{color: #877B83; display: inline-block;}
+                        &:nth-child(1) a{
+                            width: 20px;
+                            height: 20px;
+                            background: url(../public/img/mypage.png) no-repeat center center;
+                        }
+                        &:nth-child(2) a{
+                            width: 20px;
+                            height: 20px;
+                            background: url(../public/img/cart.png) no-repeat center bottom;
+                        }
+                        &:nth-child(3) a{
+                            width: 20px;
+                            height: 20px;
+                            background: url(../public/img/like.png) no-repeat center bottom;
+                        }
+                    
+                    }
+                }
+            }
+        }
+    }
+}
+.section01title{
+    padding: 100px 0;
+    h2{
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 18px;
+        color: #877b73;
+    }
+    p{
+        text-align: center;
+        font-size: 13px;
+        color: #877b73;
+        line-height: 150%;
+    }
+    #sectionTitleSwiper{
+        width: 1440px;
+        margin: 70px auto;
+        position: relative;
+        .pagination{
+        .swipernext{
+            position: absolute;
+            top: 50%;
+            right: -60px;
+            z-index: 10;
+            width: 24px;
+            height: 45px;
+            transform: translateY(-50%);
+            background: url(./main_icon_pc.png) no-repeat -464px -108px;
+
+        }
+        .swiperprev{
+            position: absolute;
+            top: 50%;
+            left: -60px;
+            z-index: 10;
+            width: 24px;
+            height: 45px;
+            background: url(./main_icon_pc.png) no-repeat -405px -109px;
+            transform: translateY(-50%);
+        }
+        }
+        .pagination_fraction{
+            position: absolute;
+            top: -40px;
+            right: 0;
+            z-index: 10;
+            width: 50px;
+            height: 30px;
+        }
+        .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+            left: 97%;
+            width: 100%;
+            color: #877b73;
+        }
+        .sectionTitleText{
+            color: #877b73;
+            font-size: 13px;
+            padding-top: 10px;
+        }
+    }
+}
+
+.swiper-button-prev, .swiper-button-next{
+    color: #fff;
+    width: 20%;
+}
