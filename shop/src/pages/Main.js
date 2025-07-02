@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import SectionTitle from "../components/SectionTitle";
 import "swiper/css";
 import 'swiper/css/navigation';
-import data from '../data/data';
 import {  Navigation } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 
-const Main = () => {
-    let [shopping] =useState(data)
+const Main = ({shopping}) => {
     return (
         <div>
             <main>
@@ -37,18 +36,20 @@ const Main = () => {
                     <ul>
                         {
                             shopping.map((item,index) => (
-                                <li key={index}>
-                                    <img src={process.env.PUBLIC_URL + shopping[index].img} alt="" />
-                                    <div className="textbox">
-                                        <div className="priceWrap">
-                                            <span className="sale">{shopping[index].sale}</span>
-                                            <span className="price">{shopping[index].price}</span>
-                                            <span className="discount">{shopping[index].discount}</span>
+                                <li key={item.id}>
+                                    <Link to={`/detail/${item.id}`}>
+                                        <img src={process.env.PUBLIC_URL + item.img} alt="" />
+                                        <div className="textbox">
+                                            <div className="priceWrap">
+                                                <span className="sale">{item.sale}</span>
+                                                <span className="price">{item.price}</span>
+                                                <span className="discount">{item.discount}</span>
+                                            </div>
+                                            <div className="title">{item.title}</div>
+                                            <div className="descript">{item.descript}</div>
+                                            <div className="company">{item.company}</div>
                                         </div>
-                                        <div className="title">{shopping[index].title}</div>
-                                        <div className="descript">{shopping[index].descript}</div>
-                                        <div className="company">{shopping[index].company}</div>
-                                    </div>
+                                    </Link>
                                 </li>
                             ))
                         }
